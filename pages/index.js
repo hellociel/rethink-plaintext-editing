@@ -7,15 +7,15 @@ import classNames from 'classnames';
 import { listFiles } from '../files';
 
 // Used below, these need to be registered
-import MarkdownEditor from '../MarkdownEditor';
-import PlaintextEditor from '../components/PlaintextEditor';
+import MarkdownEditor from './components/MarkdownEditor';
+import PlaintextEditor from './components/PlaintextEditor';
 
-import IconPlaintextSVG from '../public/icon-plaintext.svg';
-import IconMarkdownSVG from '../public/icon-markdown.svg';
-import IconJavaScriptSVG from '../public/icon-javascript.svg';
-import IconJSONSVG from '../public/icon-json.svg';
+import IconPlaintextSVG from '../public/svg/icon-plaintext.svg';
+import IconMarkdownSVG from '../public/svg/icon-markdown.svg';
+import IconJavaScriptSVG from '../public/svg/icon-javascript.svg';
+import IconJSONSVG from '../public/svg/icon-json.svg';
 
-import css from './style.module.css';
+import css from '../public/css/style.module.css';
 
 const TYPE_TO_ICON = {
   'text/plain': IconPlaintextSVG,
@@ -99,8 +99,8 @@ Previewer.propTypes = {
 
 // Uncomment keys to register editors for media types
 const REGISTERED_EDITORS = {
-  // "text/plain": PlaintextEditor,
-  // "text/markdown": MarkdownEditor,
+  'text/plain': PlaintextEditor,
+  'text/markdown': MarkdownEditor
 };
 
 function PlaintextFilesChallenge() {
@@ -114,7 +114,8 @@ function PlaintextFilesChallenge() {
 
   const write = file => {
     console.log('Writing soon... ', file.name);
-
+    // let updatedFiles = [...this.state.files, file];
+    setActiveFiles(file);
     // TODO: Write the file to the `files` array
   };
 

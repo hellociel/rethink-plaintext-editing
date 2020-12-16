@@ -1,4 +1,4 @@
-.editor {
+.plaintextEditor {
   width: 640px;
   background-color: var(--color-white);
   padding: 20px;
@@ -6,4 +6,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.markdownEditor {
+  width: 640px;
+  background-color: var(--color-white);
 }
