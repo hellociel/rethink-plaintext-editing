@@ -23,8 +23,8 @@ body {
 
 /* Layout */
 .page {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   background-color: var(--color-background);
   display: flex;
@@ -184,6 +184,13 @@ body {
   padding: 0 20px;
   line-height: 40px;
   background-color: var(--color-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.preview .editButton {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .preview .content {
@@ -191,7 +198,79 @@ body {
   line-height: 1.6;
   color: var(--color-text-dark);
   white-space: pre-wrap;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
   padding: 20px;
 }
+
+/* .buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  margin-right: 0px;
+} */
+
+button {
+  margin: 10px;
+  border: none;
+  text-align: center;
+  border-radius: 0.3em;
+  text-align: center;
+  border: none;
+  border-radius: 0.3em;
+}
+.saveButton {
+  padding: 10px 15px;
+  background-color: grey;
+  color: white;
+  justify-content: flex-end;
+}
+
+.saveButton:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+.editButton {
+  padding: 7px 10px;
+  background-color: grey;
+  color: white;
+}
+
+.editButton:hover {
+  padding: 7px 10px;
+  background-color: royalblue;
+  color: white;
+}
+
+.editButtonDiv {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 3%;
+}
+
+.createButton {
+  padding: 10px;
+}
+/* 
+.popup {
+  width: 100px;
+  height: 30px;
+  animation-name: FadeAnimation;
+  background-color: white;
+  animation-duration: 3s;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+@keyframes FadeAnimation {
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+
+  0% {
+    opacity: 0;
+    visibility: visible;
+    animation-duration: 2s;
+  }
+} */
