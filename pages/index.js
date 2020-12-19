@@ -35,8 +35,10 @@ function PlaintextFilesChallenge() {
 
   const write = value => {
     if (!value) {
-      let newFile = new File();
-      setFiles([...files, file]);
+      let newFile = new File([''], 'Untitled.txt', {
+        type: 'text/plain'
+      });
+      setFiles([...files, newFile]);
     } else {
       activeFile.text(value);
     }
